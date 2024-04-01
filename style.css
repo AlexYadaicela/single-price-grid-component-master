@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-primary-cyan: hsl(179, 62%, 43%); 
+    --clr-primary-yellow: hsl(71, 73%, 54%); 
+
+    --clr-neutral-cyan-100: hsl(179, 62%, 53%); 
+    --clr-neutral-gray: hsl(204, 43%, 93%); 
+    --clr-neutral-blue: hsl(218, 22%, 67%); 
+    --clr-neutral-white: hsl(0, 0%, 100%); 
+
+    --fw-light: 400; 
+    --fw-bold: 700; 
+
+    --custom-inline-padding: 1.5em; 
+    --custom-block-padding: 1em; 
+
+    --ff-default: "Karla", sans-serif;
+}
+
+
+body{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-default);
+    background-color: var(--clr-neutral-gray);
+    height: 100vh;
+    color: var(--clr-neutral-white);
+    font-size: 14px;
+}
+
+
+
+.product-card{
+    display: grid; 
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'; 
+    width: 19.5rem;
+}
+
+@media (min-width: 376px){
+    .product-card{
+        width: 33rem;
+        grid-template-areas: 
+        'one one'
+        'two three';
+    }
+}
+
+
+
+.product-description{
+    background-color: var(--clr-neutral-white);
+    grid-area: one; 
+}
+
+.product-description h3{
+    color: var(--clr-primary-cyan);
+}
+
+.highlight-text{
+    color: var(--clr-primary-yellow);
+    font-weight: var(--fw-bold);
+}
+
+.description-text{
+    line-height: 1.8em;
+}
+
+.product-price{
+    background-color: var(--clr-primary-cyan);
+    grid-area: two; 
+}
+
+
+.price > span{
+    font-size: 25px;
+    color: var(--clr-neutral-white);
+}
+
+.product-services{
+    background-color: var(--clr-neutral-cyan-100);
+    grid-area: three; 
+}
+
+.service-links a{
+    text-decoration: none;
+}
+
+.service-links{
+    width: 13rem;
+}
+
+.btn{
+    background-color: var(--clr-primary-yellow);
+    border-radius: 5px;
+    height: 3em;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 2.5em; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--clr-primary-yellow);
+    opacity: 85%;
+}
+
+
+.btn-sign-up{
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+.clr-grayish-blue{
+    color: var(--clr-neutral-blue);
+}
+
+.clr-gray{
+    color: var(--clr-neutral-gray)
+}
+
+.fw-bold{
+    font-weight: var(--fw-bold);
+}
+
+.product-description, .product-price, .product-services{
+    padding-inline: var(--custom-inline-padding);
+    padding-block: var(--custom-block-padding); 
+}
+
+h3{
+    font-weight: var(--fw-bold);
+}
+
+.service-text{
+    margin-block-start: 1.5em;
+    line-height: 0.5em;
+}
